@@ -21,4 +21,7 @@ jobs:
 
       - name: Send ntfy notification
         run: |
-          curl -d "Integración continua con éxito en main. Hola Mundo completado." ntfy.sh/devops-itla
+          curl \
+            -H "Title: Integración continua completada" \
+            -d "Integración continua funcionando. Con un archivo Hola Mundo." \
+            ntfy.sh/devops-itla
